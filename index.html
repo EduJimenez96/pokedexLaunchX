@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="pokedex.js"></script>
 </head>
+
 <body>
-    
+    <input type="text" id="search-input">
+    <input type="button" id="poke-search" value="Buscar pokémon" onclick="search()">
+    <br>
+    <img src="" id="image">
+    <h3>Nombre:</h3>
+    <h4 id="name"></h4>
+    <h3>Tipo</h3>
+    <h4 id="type"></h4>
+    <h3>Estadísticas</h3>
+    <ul id="stats"></ul>
+    <h3>Movimientos</h3>
+    <ul id="moves"></ul>
 </body>
+
 </html>
