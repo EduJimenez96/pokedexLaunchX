@@ -1,0 +1,52 @@
+.text-info{
+    margin: 10px;
+    background-color: #032d29;
+    color: #cfb90b;
+    text-align: center;
+    display: flex;
+    justify-content: center;    
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border: solid;
+    border-color: #6a6b70;
+    border-radius: 10px;
+    border-width: 1;
+    align-items: center;
+}
+
+.text-info h4, h3{
+    margin: 0px;
+}
+
+.stats-info{
+    width: 200px;
+    margin: 10px;
+    background-color: #032d29;
+    color: #cfb90b;
+    border-radius: 10px;
+    border-width: 1;
+    font-weight: bold;
+    border: solid;
+    border-color: #6a6b70;
+    border-radius: 10px;
+    border-width: 1;
+    padding: 10px;    
+}
+
+.moves-info{
+    width: 200px;
+    height: 300px;
+    overflow: auto;
+    margin: 10px;
+    background-color: #032d29;
+    color: #cfb90b;
+    border-radius: 10px;
+    border-width: 1;
+    font-weight: bold;
+    border: solid;
+    border-color: #6a6b70;
+    border-radius: 10px;
+    border-width: 1;
+    padding: 10px;    
+}

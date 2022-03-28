@@ -5,9 +5,20 @@ function search() {
 
 const searchPokemon = (pokeName) => {
     console.log(pokeName);
-    const url = 'https://pokeapi.co/api/v2/pokemon/' + pokeName;
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + pokeName.toLowerCase();
     fetch(url).then((response) => {
-        return response.json();
+        if (response.ok) {
+            return response.json();
+        } else {
+            let imageTag = document.getElementById("image");
+            let nameTag = document.getElementById("name");
+            let typeTag = document.getElementById("type");
+
+            imageTag.src = "images/notFound.png";
+            nameTag.innerHTML = "Not found";
+            typeTag.innerHTML = "Not found";
+        }
+
     }).then((data) => {
 
         let info = {
@@ -24,35 +35,38 @@ const searchPokemon = (pokeName) => {
 }
 
 function showPokeInfo(info) {
+    let imageTag = document.getElementById("image");
     let nameTag = document.getElementById("name");
     let typeTag = document.getElementById("type");
-    let movesList = document.getElementById("moves");
     let stats = document.getElementById("stats");
-    let imageTag = document.getElementById("image");
-
-    let nameText = document.createTextNode(info["name"]);
-    let typeText = document.createTextNode(info["type"]);
-    let movesText;
-    let statsText;
-
-    nameTag.appendChild(nameText);
-    typeTag.appendChild(typeText);
+    let movesList = document.getElementById("moves");
 
     imageTag.src = info["image"];
+    nameTag.innerHTML = info["name"];
+    typeTag.innerHTML = info["type"];
 
-    for (i = 0; i < info["moves"].length; i++) {
-        var li = document.createElement('li');
+    displayList(stats, info["stats"]);
+    displayList(movesList, info["moves"], true);
+}
 
-        movesText = document.createTextNode(info["moves"][i].move["name"]);
-        li.appendChild(movesText);
-        movesList.appendChild(li);
+function displayList(ulElement, list, isMoves = false) {
+    let text;
+
+
+    if (ulElement.hasChildNodes()) {
+        var listLi = ulElement.getElementsByTagName("li");
+
+        ulElement.innerHTML = '';
+        /*for (i = 0; i <= listLi.length; i++){
+            ulElement.removeChild(listLi[i]);
+            i = 0;
+        } */
     }
 
-    for (i = 0; i < info["stats"].length; i++) {
+    for (i = 0; i < list.length; i++) {
         var li = document.createElement('li');
-
-        statsText = document.createTextNode(info["stats"][i].stat["name"] + ": " + info["stats"][i].base_stat);
-        li.appendChild(statsText);
-        stats.appendChild(li);
+        text = isMoves ? document.createTextNode(list[i].move["name"]) : document.createTextNode(list[i].stat["name"] + ": " + list[i].base_stat);
+        li.appendChild(text);
+        ulElement.appendChild(li);
     }
 }

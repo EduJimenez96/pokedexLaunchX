@@ -5,23 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="pokedex.js"></script>
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/image.css">
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="pokedex.js" defer></script>
 </head>
 
 <body>
-    <input type="text" id="search-input">
-    <input type="button" id="poke-search" value="Buscar pokémon" onclick="search()">
-    <br>
-    <img src="" id="image">
-    <h3>Nombre:</h3>
-    <h4 id="name"></h4>
-    <h3>Tipo</h3>
-    <h4 id="type"></h4>
-    <h3>Estadísticas</h3>
-    <ul id="stats"></ul>
-    <h3>Movimientos</h3>
-    <ul id="moves"></ul>
+    <div class="search-div">
+        <input type="text" id="search-input">
+        <button title="Search pokémon" id="poke-search" value="Buscar pokémon" onclick="search()">
+            <span class="material-icons">
+                catching_pokemon
+            </span>
+        </button>
+        <!--<input type="button" id="poke-search" value="Buscar pokémon" onclick="search()">-->
+    </div>
+    <section>
+        <div class="poke-info">
+            <div id="poke-frame">
+                <div id="poke-image">
+                    <img src="images/default.png" id="image">
+                </div>
+            </div>
+            <div class="text-info">
+                <h4 id="name">--</h4>
+            </div>
+            <div class="text-info">
+                <h4 id="type">--</h4>
+            </div>
+        </div>
+        <div class="poke-info">
+            <h3>Stats</h3>
+            <div class="stats-info">
+                <ul id="stats"></ul>
+            </div>
+            <h3>Moves</h3>
+            <div class="moves-info">
+                <ul id="moves"></ul>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

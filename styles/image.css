@@ -1,0 +1,17 @@
+#poke-frame{
+    background-color: #f1f2d3;
+    padding: 7px 30px 7px 30px;
+    max-width: fit-content;
+    border: solid;
+    border-width: 7px;
+    border-radius: 20px;
+    border-color: #6a6b70;
+}
+
+#poke-image{
+    width: 210px;
+    height: 210px;
+    background-color: #f1f2d3;
+    border-radius: 20px;
+    /*text-align: center;*/
+}

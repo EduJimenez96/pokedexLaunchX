@@ -1,0 +1,92 @@
+@media (max-width: 1076px) {
+    section {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .poke-info {
+        width: 100px;
+        height: 200px;
+        padding: 15px;            
+    }
+
+    .poke-info:first-child {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-right: solid;
+        border-right-color: #6a6b70;
+        border-bottom: 0px;
+    }
+
+    .poke-info:last-child {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 0px;
+        border-left: solid;
+        border-left-color: #6a6b70;
+        border-top: 0px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    #poke-image {
+        width: 105px;
+        height: 105px;
+    }
+
+    .text-info {
+        margin: 10px;
+        background-color: #032d29;
+        color: #cfb90b;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        padding: 5px;
+        border: solid;
+        border-color: #6a6b70;
+        border-radius: 10px;
+        border-width: 1;
+        align-items: center;
+    }
+
+    .text-info {
+        width: 100px;
+        height: 40px;
+        padding: 2px;
+    }
+
+    .text-info h4, h3 {
+        font-size: 12px;
+    }
+
+    .stats-info {
+        width: 100px;
+        margin: 5px;
+        border-width: 1px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .moves-info {
+        width: 100px;
+        height: 150px;
+        margin: 5px;
+        border-width: 1px;
+        padding: 1px;
+        font-size: 12px;
+    }
+
+    .poke-info:last-child h3 {
+        font-size: 15px;
+    }
+}
